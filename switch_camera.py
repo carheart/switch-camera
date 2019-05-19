@@ -14,8 +14,8 @@ from farmware_tools import get_config_value
 
 switch_camera_to = get_config_value('Switch Camera', 'camera_setter')
 
-switch_camera_to = switch_camera_to.strip();
-switch_camera_to = switch_camera_to.capitalize();
+switch_camera_to = switch_camera_to.strip()
+switch_camera_to = switch_camera_to.capitalize()
 
 if switch_camera_to != "RPI" or switch_camera_to != "USB":
     device.log(message='Wrong input to switch camera provided - shd be USR or RPI', message_type='info')
