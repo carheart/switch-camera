@@ -10,7 +10,7 @@
  "language": "python",
  "author": "FarmBot, Inc.",
  "description": "Switch between USB and Raspberry Pi cameras.",
- "version": "1.0.0",
+ "version": "1.0.1",
  "min_os_version_major": 6,
  "url": "https://raw.githubusercontent.com/carheart/switch-camera/master/manifest.json",
  "zip": "https://github.com/carheart/switch-camera/archive/master.zip",
