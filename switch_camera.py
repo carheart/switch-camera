@@ -12,17 +12,15 @@ switch_camera_to = get_config_value(farmware_name='Switch Camera', config_name='
 switch_camera_to = switch_camera_to.strip()
 switch_camera_to = switch_camera_to.upper()
 
-device.log(message=switch_camera_to, message_type='info')
-
 if switch_camera_to not in ("RPI", "USB"):
-    device.log(message='Wrong input to switch camera provided - shd be USB or RPI', message_type='info')
+    message = "Wrong input to switch camera provided  ", switch_camera_to, ". Values USB or RPI shd be used"
+    device.log(message, message_type='info')
 else:
     camera = os.getenv('camera', 'USB')
     device.set_user_env('camera', json.dumps(switch_camera_to))
-    device.log(message='Camera was switched', message_type='info')
-    # camera = os.getenv('camera', 'USB')
-    # switch_camera_to = 'RPI' if 'USB' in camera else 'USB'
-    # device.set_user_env('camera', json.dumps(switch_camera_to))
+    message = "Camera was switched to ", switch_camera_to
+    device.log(message, message_type='success')
+
 
 
 
