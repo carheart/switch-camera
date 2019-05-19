@@ -14,7 +14,7 @@ switch_camera_to = switch_camera_to.upper()
 
 device.log(message=switch_camera_to, message_type='info')
 
-if switch_camera_to != "RPI" or "USB":
+if switch_camera_to not in ("RPI", "USB"):
     device.log(message='Wrong input to switch camera provided - shd be USB or RPI', message_type='info')
 else:
     camera = os.getenv('camera', 'USB')
