@@ -4,7 +4,7 @@
     {
       "name": "camera_setter",
       "label": "Specify camera to use (either USB or RPI)",
-      "value": USB
+      "value": "USB"
     }
   ],
  "language": "python",
