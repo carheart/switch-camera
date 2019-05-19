@@ -13,12 +13,12 @@ switch_camera_to = switch_camera_to.strip()
 switch_camera_to = switch_camera_to.upper()
 
 if switch_camera_to not in ("RPI", "USB"):
-    message = "Wrong input to switch camera provided  ", switch_camera_to, ". Values USB or RPI shd be used"
+    message = "Wrong input to switch camera provided  " + switch_camera_to + ". Values USB or RPI shd be used"
     device.log(message, message_type='info')
 else:
     camera = os.getenv('camera', 'USB')
     device.set_user_env('camera', json.dumps(switch_camera_to))
-    message = "Camera was switched to ", switch_camera_to
+    message = "Camera was switched to " + switch_camera_to
     device.log(message, message_type='success')
 
 
